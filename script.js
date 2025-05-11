@@ -95,13 +95,15 @@ function calculateMortgage() {
     totalInterest += interestPayment;
   }
 
-  document.getElementById("monthly-payment").innerText = (
-    monthlyPayment + extraPayment
-  ).toFixed(2);
+  document.getElementById("monthly-payment").innerText = "₹" + (
+  monthlyPayment + extraPayment
+).toFixed(2);
+
   document.getElementById("total-emi").innerText = totalMonths;
-  document.getElementById("total-principal").innerText = loanAmount.toFixed(2);
-  document.getElementById("total-interest").innerText =
-    totalInterest.toFixed(2);
+  document.getElementById("total-principal").innerText = "₹" + loanAmount.toFixed(2);
+
+  document.getElementById("total-interest").innerText = "₹" + totalInterest.toFixed(2);
+
 
   const mortgageData = {
     principal: loanAmount,
@@ -247,13 +249,13 @@ if (window.location.pathname.endsWith("amortization.html")) {
       const row = document.createElement("tr");
       row.innerHTML = `
         <td>${i}</td>
-        <td>${(principalPayment + interestPayment + extraPayment).toFixed(
-          2
-        )}</td>
-        <td>${interestPayment.toFixed(2)}</td>
-        <td>${principalPayment.toFixed(2)}</td>
-        <td>${extraPayment.toFixed(2)}</td>
-        <td>${remainingBalance.toFixed(2)}</td>
+        <td>₹${(principalPayment + interestPayment + extraPayment).toFixed(2)}</td>
+
+        <td>₹${interestPayment.toFixed(2)}</td>
+        <td>₹${principalPayment.toFixed(2)}</td>
+        <td>₹${extraPayment.toFixed(2)}</td>
+        <td>₹${remainingBalance.toFixed(2)}</td>
+
       `;
       amortizationTable.appendChild(row);
 

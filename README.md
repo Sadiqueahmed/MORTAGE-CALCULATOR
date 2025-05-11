@@ -18,8 +18,9 @@ Try it live here: **[Click to view calculator](https://sadiqueahmed.github.io/MO
 
 ## 📷 Screenshot
 
-![Mortgage Calculator Screenshot](./Screenshot 2025-05-11 184216.png)
-![Mortgage Calculator Screenshot](./Screenshot 2025-05-11 184232.png)
+![Mortgage Calculator Screenshot](./Screenshot%202025-05-11%20184216.png)  
+![Mortgage Calculator Screenshot](./Screenshot%202025-05-11%20184232.png)
+
 
 > _Add a screenshot of your app and name the image `screenshot.png` in the root directory._
 

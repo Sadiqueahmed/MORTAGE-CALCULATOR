@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mortgage Calculator</h1>
+    <div class="container">
+        <div class="calculator">
+            <label for="principal">Principal Amount:</label>
+            <input type="number" id="principal" placeholder="Enter principal amount">
+
+           
+            <label for="downpayment">Down Payment:</label>
+            <div class="input-group">
+                <input type="number" id="downpayment" placeholder="Down payment amount" oninput="updatePercentage()" />
+            </div>
+            
+            <div class="percentage-group">
+                <input type="number" id="downpayment-percentage" placeholder="Percentage" oninput="updateDownpayment()" min="0" max="100" style="width: 25%;" />
+                <span style="width: 75%; display: inline-block;">% of Principal</span>
+            </div>
+
+            <label for="interest">Annual Interest Rate (%):</label>
+            <input type="number" id="interest" placeholder="Enter interest rate">
+
+            <label for="years">Loan Term (Years):</label>
+            <input type="number" id="years" min="1" max="30" value="30">
+
+            <label for="extra-payment">Extra Payment:</label>
+            <input type="number" id="extra-payment" placeholder="Enter extra payment per month">
+
+            <div class="button-container">
+                <button class="calculate" onclick="calculateMortgage()">Calculate</button>
+                <button class="clear" onclick="clearFields()">Clear</button>
+            </div>
+            <button id="amortization-button" onclick="viewAmortizationPage()" disabled>View Amortization Table</button>
+        </div>
+
+        <div class="results">
+            <h2>Results</h2>
+            <div class="result-item">
+                <span>Monthly Payment:</span> $<span id="monthly-payment">0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Total EMI:</span> <span id="total-emi">0</span>
+            </div>
+            <div class="result-item">
+                <span>Total Principal:</span> $<span id="total-principal">0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Total Interest:</span> $<span id="total-interest">0.00</span>
+            </div>
+            <div class="chart-container">
+                <canvas id="pie-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

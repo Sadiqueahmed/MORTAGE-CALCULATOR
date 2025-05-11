@@ -1,4 +1,4 @@
-# 🏠 Mortgage Calculator (₹ Rupees)
+# 🏠 Mortgage Calculator
 
 A responsive and interactive Mortgage Calculator built with HTML, CSS, JavaScript, and Chart.js. This tool allows users to estimate monthly mortgage payments, visualize principal vs. interest breakdown, and generate a complete amortization schedule—all using Indian Rupee (₹) as the currency symbol.
 
